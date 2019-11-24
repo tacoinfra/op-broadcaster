@@ -76,7 +76,7 @@ $ node src/main.js
 8. Next, input the name of the parameter (these names are defined in the [serverless.yml](serverless.yml#L31-L32) file) with an optional description. You'll only need to use the _Standard_ tier, and _Type_ should be *SecureString*. You can leave the _KMS key source_ and _KMS Key ID_ at the default settings. Enter the 98 character `edsk...` value into the _Value_ field, then click _Create Parameter_:
 ![alt text](images/image4.png "Create Parameter")
 
-9. Edit the [serverless.yml](template.yml#L10-17) file and customize anything you'd like to customize, such as the region you'll be deploying each stage to. The default file sets up two stages: `dev` and `prod`, so that you can have a dev version running on a testnet, and a prod version running on mainnet. You can configure this in the `provider` section:
+9. Edit the [serverless.yml](serverless.yml#L10-17) file and customize anything you'd like to customize, such as the region you'll be deploying each stage to. The default file sets up two stages: `dev` and `prod`, so that you can have a dev version running on a testnet, and a prod version running on mainnet. You can configure this in the `provider` section:
 ```yaml
 provider:
   name: aws
@@ -89,7 +89,7 @@ provider:
 ```
 This defines a `dev` and `prod` stage that are both in the `eu-west-1` region, along with an API key for each.
 
-10. While editing [serverless.yml](template.yml#L26-L35) file, you'll also want to ensure that the `custom` variable section matches the stages you've defined in the `provider` section:
+10. While editing [serverless.yml](serverless.yml#L26-L35) file, you'll also want to ensure that the `custom` variable section matches the stages you've defined in the `provider` section:
 ```yaml
 custom:
   stages:
