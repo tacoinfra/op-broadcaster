@@ -206,7 +206,7 @@ Be sure to replace the `<api-key>` in the `x-api-key` header with the API key th
 
 # Testing
 
-This function is extensively unit tested with [Jest](https://jestjs.io/). You can run the tests yourself with the following commands:
+This software in unit tested with [Jest](https://jestjs.io/). You can run the tests yourself with the following commands:
 
 ```shell
 # Install required dependencies.
