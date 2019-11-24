@@ -1,0 +1,45 @@
+# Serverless Config
+service:
+  name: blockscale
+
+# Plugins
+plugins:
+  - serverless-webpack
+
+# Provider
+provider:
+  name: aws
+  apiKeys:
+    - ${opt:stage,'dev'}
+  runtime: nodejs10.x
+
+  stage: ${opt:stage,'dev'}
+  region: eu-west-1
+
+# Environment Variables
+
+  environment:
+    SECRET_KEY_BASE_58: ${ssm:${self:custom.ssmParameter.${self:provider.stage}}~true}
+    NODE_ADDR: ${self:custom.nodeAddr.${self:provider.stage}}
+
+# Custom Variables
+custom:
+  stages:
+    - dev
+    - prod
+  ssmParameter:
+    dev: "/tf/test-secret"
+    prod: "/tf/prod-secret"
+  nodeAddr:
+    dev: "https://rpctest.tzbeta.net"
+    prod: "https://rpc.tzbeta.net"
+
+# Functions
+functions:
+  sign:
+    handler: handler.sign
+    events:
+      - http:
+          method: post
+          path: sign
+          private: true
