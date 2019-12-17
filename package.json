@@ -16,15 +16,15 @@
     "web-request": "^1.0.7"
   },
   "devDependencies": {
-    "@types/aws-lambda": "^8.10.37",
+    "@types/aws-lambda": "^8.10.39",
     "@types/jest": "^24.0.23",
-    "@types/node": "^10.17.6",
+    "@types/node": "^10.17.9",
     "jest": "^24.9.0",
     "serverless-webpack": "^5.2.0",
     "ts-jest": "^24.2.0",
     "ts-loader": "^6.2.1",
     "typescript": "^3.7.3",
-    "webpack": "^4.41.2"
+    "webpack": "^4.41.3"
   },
   "author": "Blockscale"
 }
