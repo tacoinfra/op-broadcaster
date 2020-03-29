@@ -54,6 +54,7 @@ remote: Compressing objects: 100% (9/9), done.
 remote: Total 710 (delta 3), reused 9 (delta 3), pack-reused 698
 Receiving objects: 100% (710/710), 2.69 MiB | 9.12 MiB/s, done.
 Resolving deltas: 100% (366/366), done.
+$ npm i
 $ echo 'console.log(eztz.crypto.extractKeys("edsk..."));' >> src/main.js
 $ node src/main.js 
 {
