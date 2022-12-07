@@ -11,7 +11,7 @@
     "bs58check": "^2.1.2",
     "is-hex": "^1.1.3",
     "libsodium-wrappers": "^0.7.6",
-    "serverless": "^1.59.2",
+    "serverless": "^3.25.1",
     "source-map-support": "^0.5.16",
     "web-request": "^1.0.7"
   },
